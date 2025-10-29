@@ -89,3 +89,75 @@ section {
 .button:hover{
     background: #a0d826;
 }
+
+@keyframes planet-move {
+    from{transform: translateY(0px);}
+    to{transform: translateY(70px);}
+}
+
+.moving-planet{
+    background: url(img/moving-planet.png);
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 230px;
+    transform: rotate(-15deg);
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    animation-name: planet-move;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.title{
+    padding-top: 100px;
+    text-align: center;
+    color: #FFF;
+    font-size: 80px;
+    text-shadow: 5px black;
+}
+
+.about-content{
+    width: 35%;
+    height: 270px;
+    padding-left: 40px;
+    padding-top: 40px;
+    background-color: #792AFF;
+    position: relative;
+    display: flex;
+}
+
+.about-title{
+    background-color: #FFF;
+    font-size: 20px;
+    max-width: 463px;
+    font-weight: 700px;
+    margin-bottom: 20px;
+    font-family: Comfortaa;
+}
+
+.about-card{
+    background-image: url(img/photo2.png);
+    width: 376;
+    height: 346;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.about-card p{
+    color: #e5beff;
+    font-size: 17px;
+    align-self: start;
+    padding-left: 20px;
+    line-height: 25px;
+    font-family: 'Comfortaa';
+}
+
+.about-card img{
+    padding-bottom: 20px;
+}
