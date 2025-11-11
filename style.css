@@ -82,7 +82,44 @@ section {
     transition-duration: 0.3s;
 }
 
+.button1{
+    width: 200px;
+    height: 80px;
+    border-radius: 100px;
+    border: 2px solid #000;
+    background: #BBFF2C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 0 #000000;
+    transition-duration: 0.3s;
+}
+
+.button3{
+    margin-top: 70px;
+    width: 200px;
+    height: 60px;
+    border-radius: 100px;
+    border: 2px solid #000;
+    background: #BBFF2C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 0 #000000;
+    transition-duration: 0.3s;
+}
+
 .button a{
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.button1 a{
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.button3 a{
     font-size: 20px;
     text-decoration: none;
 }
@@ -151,7 +188,7 @@ section {
 }
 
 .about-card p{
-    color: #0bff79;
+    color: #def3f2;
     font-size: 17px;
     align-self: start;
     padding-left: 20px;
@@ -201,7 +238,7 @@ section {
     font-family: 'Comfortaa';
 }
 
-.work-block img{
+.works-block img{
     margin: 0 20px;
     width: 30%;
     margin-left: 30px;
@@ -348,7 +385,7 @@ nav{
     }
     
     .logo{
-        font-size: 40px;
+        font-size: 60px;
         padding-left: 20px;
         padding-top: 10px;
     }
@@ -358,16 +395,12 @@ nav{
     /*Main*/
 
     .main-content{
-        max-width: 320px;
+        max-width: 500px;
     }
 
     .main-title{
-        padding-top: 30px;
-        font-size: 30px;
-    }
-
-    .main-subtitle{
-        font-size: 15px;
+        padding-top: 40px;
+        font-size: 40px;
     }
 
     .planet, .moving-cloud, .moving-planet2 {
@@ -379,13 +412,51 @@ nav{
         padding-top: 30px;
     }
 
+    .button{
+        width: 300px;
+        height: 100px;
+        border-radius: 100px;
+        border: 2px solid #000;
+        background: #BBFF2C;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 5px 5px 0 #000000;
+        transition-duration: 0.3s;
+    }
+
+    .button1{
+        margin-left: 30px;
+        width: 230px;
+        height: 60px;
+        border-radius: 100px;
+        border: 2px solid #000;
+        background: #BBFF2C;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 5px 5px 0 #000000;
+        transition-duration: 0.3s;
+    }
+
+    .button a{
+        font-size: 25px;
+        text-decoration: none;
+    }
+
+    .button1 a{
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+
 
 
     /* ABT */
 
     .about-block{
         flex-direction: column;
-        margin-top: 20px;
+        margin-top: 200px;
         padding: 0;
     }
 
@@ -424,7 +495,6 @@ nav{
     .skills-card p{
         font-size: 16px;
         margin-top: 15%;
-        margin-bottom: 20%;
     }
 
     .skills-section{
@@ -435,7 +505,6 @@ nav{
         position: absolute;
         bottom: 100px;
     }
-
 
 
     /* WORKS */
@@ -470,4 +539,5 @@ nav{
         font-size: 15px;
         max-width: 290px;
     }
+
 }
