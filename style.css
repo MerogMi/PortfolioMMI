@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Inter:ital,opsz,wght@0,14..32,700;1,14..32,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Inter:wght@700&display=swap');
 
 *{
     margin: 0;
@@ -6,7 +6,7 @@
     scroll-behavior: smooth;
 }
 
-section {
+section{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,33 +14,32 @@ section {
     position: relative;
 }
 
-#main {
-    background-image: url('img/bgMAIN.png')
+#main{
+    background-image: url(img/bgMAIN.png);
 }
 
-#about {
-    background-image: url('img/bgABOUT.png')
-}
+ #about{
+     background-image: url(img/bgABOUT.png);
+ }
+ 
+ #skills{
+     background-image: url(img/bgSKILLS.png);
+ }
+ 
+ #work{
+     background-image: url(img/bgWORKS.png);
+ }
+ 
+ #comments{
+     background-image: url(img/bgCOMMENTS.png);
+ }
 
-#skills{
-    background-image: url('img/bgSKILLS.png')
-}
-
-#work {
-    background-image: url('img/bgWORKS.png')
-}
-
-#comments {
-    background-image: url('img/bgCOMMENTS.png')
-}
-
-.main-block, .about-block, .skills-block, .works-block, .comments-block{
+ .main-block, .about-block, .skills-block, .works-block, .comments-block{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 70hv;
+    min-height: 70vh;
 }
-
 
 .main-block{
     flex-direction: column;
@@ -53,14 +52,8 @@ section {
     background-repeat: no-repeat;
     background-size: contain;
     width: 849px;
-    height: 223px;
-    padding-left: 30px;
-}
-
-.main-title{
-    padding-top: 67px;
-    color: #2B2D35;
-    font-size: 80px;
+    height: 300px;
+    padding-left: 23px;
 }
 
 .main-subtitle{
@@ -128,9 +121,109 @@ section {
     background: #a0d826;
 }
 
-@keyframes planet-move {
-    from{transform: translateY(0px);}
-    to{transform: translateY(70px);}
+.button:hover{
+    background: #a0d826;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.logo{
+   color: #BBFF2C;
+   font-size: 80px;
+   padding-left: 50px;
+}
+
+.fixed-menu{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex: 1;
+}
+
+.nav-links{
+   display: flex;
+   justify-content: center;
+   flex-grow: 1;
+   padding-right: 150px;
+}
+
+.nav-link{
+   width: 112px;
+   height: 40px;
+   border-radius: 12px;
+   border: 2px solid #000;
+   background-color: #FFF;
+   text-decoration: none;
+   color: #000;
+   font-size: 20px;
+   font-family: 'Comfortaa';
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-right: 20px;
+}
+
+.active, .nav-link:hover{
+    background-color: #c7ff4d;
+    transform: scale(1.1, 1.1);
+}
+
+.mobile-button{
+    display: none;
+    width: 40px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.hide{
+    display: none;
+}
+
+.mobile-menu{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    background-color: #200153;
+    min-height: 100vh;
+}
+
+.mobile-nav{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-nav-links .nav-link{
+    margin-bottom: 30px;
+    width: 210px;
+    height: 50px;
+}
+
+.off-scroll{
+    overflow: hidden;
+}
+
+
+
+
+.planet{
+    background: url(img/planet.png);
+    background-repeat: no-repeat;
+    width: 405px;
+    height: 330px;
+    transform: rotate(-176deg);
+    position: absolute;
+    right: 20px;
+    z-index: 1;
 }
 
 .moving-planet{
@@ -148,6 +241,33 @@ section {
     animation-direction: alternate;
 }
 
+@keyframes planet-move {
+	from{transform: translateY(0px);}
+	to {transform: translateY(70px);}
+}
+
+.moving-planet2{
+    background: url(img/moving-planet2.png);
+    background-repeat: no-repeat;
+    width: 208px;
+    height: 200px;
+    transform: rotate(-15deg);
+    position: absolute;
+    bottom: 90px;
+    left: 0px;
+    animation-name: planet-move;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.moving-planet, .moving-cloud{
+    animation-name: planet-move;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
 .title{
     padding-top: 100px;
     text-align: center;
@@ -155,6 +275,8 @@ section {
     font-size: 80px;
     text-shadow: 5px black;
 }
+
+/* Обо мне */
 
 .about-content{
     width: 35%;
@@ -173,6 +295,19 @@ section {
     font-weight: 700px;
     margin-bottom: 20px;
     font-family: Comfortaa;
+}
+
+.about-card{
+    background-image: url(img/form2.png);
+    background-repeat: no-repeat;
+    width: 376px;
+    height: 346px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 90px;
+    position: relative;
 }
 
 .about-card{
@@ -200,20 +335,17 @@ section {
     padding-bottom: 20px;
 }
 
-.moving-planet2{
-    background: url(img/moving-planet2.png);
+.moving-cloud{
+    background: url(img/cloud.png);
     background-repeat: no-repeat;
-    width: 208px;
-    height: 200px;
-    transform: rotate(-15deg);
+    width: 180px;
+    height: 162px;
     position: absolute;
-    bottom: 90px;
-    left: 0px;
-    animation-name: planet-move;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    bottom: 30px;
+    left: 30px;
 }
+
+/* Навыки */
 
 .skills-card{
     background-image: url(img/form3.png);
@@ -238,7 +370,9 @@ section {
     font-family: 'Comfortaa';
 }
 
-.works-block img{
+/* Работы */
+
+ .works-block img{
     margin: 0 20px;
     width: 30%;
     margin-left: 30px;
@@ -247,11 +381,14 @@ section {
       7px 7px 0 #000000;     
 }
 
-.comments-block{
+/* Отзывы */
+
+ .comments-block{
     justify-content: space-evenly;
     max-width: 1150px;
     margin: auto;
 }
+
 
 .comment-card{
     background-image: url(img/card.png);
@@ -296,6 +433,8 @@ section {
     max-width: 250px;
 }
 
+/* Подвал */
+
 footer{
    background-color: #200153;
    height: 110px;
@@ -319,91 +458,37 @@ footer{
    margin-right: 15px;
 }
 
-nav{
-   position: fixed;
-   top: 0;
-   width: 100%;
-   z-index: 10;
-}
+/* Мобильная адаптация */
 
-.fixed-menu{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   flex: 1;
-}
-
-.nav-links{
-   display: flex;
-   justify-content: center;
-   flex-grow: 1;
-   padding-right: 150px;
-}
-
-.nav-link{
-   width: 112px;
-   height: 40px;
-   border-radius: 12px;
-   border: 2px solid #000;
-   background-color: #FFF;
-   text-decoration: none;
-   color: #000;
-   font-size: 20px;
-   font-family: 'Comfortaa';
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   margin-right: 20px;
-}
-
-.logo{
-   color: #BBFF2C;
-   font-size: 80px;
-   padding-left: 50px;
-}
-
-.active{
-    background-color: #BBFF2C;
-}
-
-.nav-link:hover{
-    background: #e4e4e4;
-}
-
-.active:hover{
-    background-color: #a6e027;
-}
-
-@media (max-width: 1000px){
-
-
-
-     /* MENU */
-
-    .nav-link{
+@media (max-width: 1000px) {
+    .mobile-button {
+        display: block;
+    } 
+    
+    .nav-links {
         display: none;
     }
-    
+
     .logo{
         font-size: 60px;
         padding-left: 20px;
         padding-top: 10px;
     }
 
-
-
-    /*Main*/
-
     .main-content{
-        max-width: 500px;
+        max-width: 320px;
     }
 
     .main-title{
-        padding-top: 40px;
-        font-size: 40px;
+        padding-top: 30px;
+        font-size: 30px;
     }
-
-    .planet, .moving-cloud, .moving-planet2 {
+    
+    .main-subtitle{
+        font-size: 16px;
+    } 
+    
+    .planet, .moving-cloud, .moving-planet2{
         display: none;
     }
 
@@ -412,58 +497,16 @@ nav{
         padding-top: 30px;
     }
 
-    .button{
-        width: 300px;
-        height: 100px;
-        border-radius: 100px;
-        border: 2px solid #000;
-        background: #BBFF2C;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 5px 5px 0 #000000;
-        transition-duration: 0.3s;
-    }
-
-    .button1{
-        margin-left: 30px;
-        width: 230px;
-        height: 60px;
-        border-radius: 100px;
-        border: 2px solid #000;
-        background: #BBFF2C;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 5px 5px 0 #000000;
-        transition-duration: 0.3s;
-    }
-
-    .button a{
-        font-size: 25px;
-        text-decoration: none;
-    }
-
-    .button1 a{
-        font-size: 20px;
-        text-decoration: none;
-    }
-
-
-
-
-    /* ABT */
-
     .about-block{
         flex-direction: column;
-        margin-top: 200px;
+        margin-top: 20px;
         padding: 0;
     }
 
     .about-card{
-        order: -1;
+        order: 1;
         background-size: contain;
-        padding-top: 20px;
+        padding-bottom: 20px;
         width: 326;
         height: 296;
     }
@@ -482,10 +525,6 @@ nav{
         font-size: 18px;
     }
 
-
-
-    /* SKILLS */
-
     .skills-card{
         margin: 20px;
         padding-left: 10px;
@@ -495,6 +534,7 @@ nav{
     .skills-card p{
         font-size: 16px;
         margin-top: 15%;
+        margin-bottom: 20px;
     }
 
     .skills-section{
@@ -506,9 +546,6 @@ nav{
         bottom: 100px;
     }
 
-
-    /* WORKS */
-
     .works-block{
         flex-direction: column;
         padding: 20px 0;
@@ -518,10 +555,6 @@ nav{
         margin: 20px 0;
         width: 80%;
     }
-
-
-
-    /* COMMENTS */
 
     .comments-block{
         flex-direction: column;
@@ -540,4 +573,19 @@ nav{
         max-width: 290px;
     }
 
+    footer{
+        height: 200px;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .footer-info{
+        text-align: center;
+    }
+ 
+}
+
+.btn-hide{
+    display: none;
 }
