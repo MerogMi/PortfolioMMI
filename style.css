@@ -56,10 +56,23 @@ section{
     padding-left: 23px;
 }
 
+.main-title{
+    padding-top: 67px;
+    color: #2B2D35;
+    font-size: 60px;
+}
+
 .main-subtitle{
     color: #2B2D35;
     font-size: 20px;
     font-family: 'Comfortaa';
+}
+
+.main-subtitle2{
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Comfortaa';
+    text-align: center;
 }
 
 .button{
@@ -298,32 +311,18 @@ nav{
 }
 
 .about-card{
-    background-image: url(img/form2.png);
-    background-repeat: no-repeat;
-    width: 376px;
-    height: 346px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 90px;
-    position: relative;
-}
-
-.about-card{
-    background-image: url(img/photo2.png);
     width: 376;
     height: 346;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 20px;
+    padding-bottom: 150px;
     position: relative;
 }
 
 .about-card p{
-    color: #def3f2;
+    color: #ffffff;
     font-size: 17px;
     align-self: start;
     padding-left: 20px;
@@ -469,6 +468,19 @@ footer{
         display: none;
     }
 
+    .button1{
+    width: 200px;
+    height: 60px;
+    border-radius: 100px;
+    border: 2px solid #000;
+    background: #BBFF2C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 0 #000000;
+    transition-duration: 0.3s;
+    }
+
     .logo{
         font-size: 60px;
         padding-left: 20px;
@@ -506,7 +518,7 @@ footer{
     .about-card{
         order: 1;
         background-size: contain;
-        padding-bottom: 20px;
+        padding-bottom: 100px;
         width: 326;
         height: 296;
     }

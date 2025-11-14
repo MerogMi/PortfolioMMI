@@ -2,10 +2,8 @@
 document.querySelector(".mobile-button").addEventListener("click", function(event)
 {
     document.querySelector(".mobile-menu").classList.toggle("hide");
-    document.querySelectorAll(".mobile-btn").forEach(function(item){
-      item.classList.toggle('btn-hide');
-    })
-});
+
+    });
 
 let menu = document.querySelector(".fixed-menu");
 menu.addEventListener('click', function(event){
@@ -55,4 +53,3 @@ window.onscroll = function() {
     activeBtn.classList.remove('active')
   }
 };
-Объяснить
